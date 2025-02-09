@@ -1,0 +1,50 @@
+site_name: Global documentation of cop-python
+
+theme:
+  logo: assets/cop-python-logo.png
+  name: "material"
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      toggle:
+        # icon: material/brightness-7
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        # icon: material/brightness-4
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+watch:
+  - cop_python
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            # https://mkdocstrings.github.io/python/usage/configuration/signatures/#annotations_path
+            annotations_path: brief
+            # https://mkdocstrings.github.io/python/usage/configuration/headings/#show_root_members_full_path
+            # show_root_members_full_path: true
+            # https://mkdocstrings.github.io/python/usage/configuration/headings/#show_symbol_type_heading
+            show_symbol_type_heading: true
+            # https://mkdocstrings.github.io/python/usage/configuration/headings/#show_symbol_type_toc
+            show_symbol_type_toc: true
+            # https://mkdocstrings.github.io/python/usage/configuration/docstrings/#docstring_section_style
+            # docstring_section_style: list
+            docstring_section_style: table
+            # https://mkdocstrings.github.io/python/usage/configuration/signatures/#show_signature_annotations
+            show_signature_annotations: true
+
+extra_css:
+  - assets/seeyousun.css

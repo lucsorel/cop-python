@@ -1,0 +1,17 @@
+.doc-heading code.doc-symbol {
+  border-left: 3px solid #ccc;
+}
+.md-typeset .doc-heading {
+  background-color: var(--md-code-bg-color);
+  line-height: inherit;
+}
+.doc-class > .doc-heading {
+  border-top: 3px solid var(--doc-symbol-class-fg-color);
+  background-color: var(--doc-symbol-class-bg-color);
+}
+.doc-heading > code > .n:first-child, .doc-heading > code > .fm:first-child {
+  font-weight: bold;
+}
+.doc-function > .doc-heading > code .n ~ * {
+  font-size: small;
+}

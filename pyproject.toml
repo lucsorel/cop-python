@@ -11,9 +11,50 @@ dev = [
     "pytest>=8.3.4",
 ]
 lint = [
+    "isort>=6.0.0",
+    "pre-commit>=4.1.0",
     "ruff>=0.9.5",
+]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.3",
+    "mkdocstrings[python]>=0.28.0",
 ]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
 console_output_style = "count"
+
+[tool.ruff]
+target-version = "py312"
+# maintain consistency with other quality tools
+line-length = 120
+# automatically fixes when possible
+fix = false
+# fix = true
+
+[tool.ruff.lint]
+# activated families of verifications (https://beta.ruff.rs/docs/rules/
+select = ["B", "E", "F", "W", "N", "SIM", "C4"]
+# do not check:
+# - E501 line lengths: ruff formatter already handles them
+extend-ignore = ["E501"]
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "lf"
+quote-style = "single"
+
+[tool.isort]
+py_version=312
+# maintain consistency with other quality tools
+line_length = 120
+# consistency with ruff-format: mode 3
+# from third_party import (
+#     lib1,
+#     lib2,
+#     [...]
+#     libn,
+# )
+multi_line_output = 3
+include_trailing_comma = true

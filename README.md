@@ -6,7 +6,12 @@ python3 convert.py .local/contacts.csv France
 python3 cop_python/convert.py --csv_input .local/contacts.csv --country_filter France
 python3 -m cop_python.convert --csv_input .local/contacts.csv --country_filter France
 python3 cop_python/convert.py --help
-uv run cop_python/convert.py --help 
+uv run cop_python/convert.py --help
+
+uv run ruff check
+uv run ruff format
+
+uv run isort
 ```
 
 ## Expérimentations et leçons
