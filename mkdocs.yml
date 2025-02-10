@@ -45,6 +45,9 @@ plugins:
             docstring_section_style: table
             # https://mkdocstrings.github.io/python/usage/configuration/signatures/#show_signature_annotations
             show_signature_annotations: true
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
 
 extra_css:
   - assets/seeyousun.css
