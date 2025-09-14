@@ -1,4 +1,5 @@
-from convert import capitalize
+
+from convert_v2 import capitalize
 
 # invalid case (text is expected)
 try:
